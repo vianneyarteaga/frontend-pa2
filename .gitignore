@@ -1,0 +1,17 @@
+# Node
+node_modules/
+www/
+dist/
+build/
+
+# Ionic Capacitor/Cordova
+android/
+ios/
+
+# PHP / Composer
+vendor/
+
+# IDE / SO
+.env
+.DS_Store
+Thumbs.db
