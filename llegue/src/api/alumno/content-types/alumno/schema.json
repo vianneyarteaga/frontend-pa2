@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alumnos",
+  "info": {
+    "singularName": "alumno",
+    "pluralName": "alumnos",
+    "displayName": "Alumno"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "apellido": {
+      "type": "string",
+      "required": true
+    },
+    "foto": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Estatus": {
+      "type": "boolean",
+      "required": true
+    },
+    "persona_autorizadas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::persona-autorizada.persona-autorizada",
+      "inversedBy": "alumnos"
+    },
+    "docente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::docente.docente",
+      "inversedBy": "alumnos"
+    }
+  }
+}

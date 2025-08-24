@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true" class="login-background">
+  <!-- Zona superior: se ve el degradado (rosas -> morado -> negro) -->
+  <div class="login-top">
+    <h2 class="login-title">Bienvenido</h2>
+  </div>
+
+  <!-- Panel inferior negro (mitad inferior) con inputs -->
+  <div class="login-bottom">
+    <div class="login-wrapper">
+      <ion-input
+        class="login-input"
+        placeholder="Usuario"
+        [(ngModel)]="username"
+        type="text"
+        clearInput
+      ></ion-input>
+
+      <ion-input
+        class="login-input"
+        placeholder="Contraseña"
+        [(ngModel)]="password"
+        type="password"
+        clearInput
+      ></ion-input>
+
+      <ion-button expand="block" class="login-button" (click)="login()">
+        Entrar
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+{
+  "name": "frontend_PersonaAut",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

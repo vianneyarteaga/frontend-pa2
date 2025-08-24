@@ -1,0 +1,86 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Estudiantes Asignados</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> -->
+  <!-- Spinner mientras carga -->
+  <!-- <ion-spinner *ngIf="loading" name="crescent" class="spinner-center"></ion-spinner> -->
+
+  <!-- Lista de alumnos -->
+  <!-- <ion-list *ngIf="!loading && alumnos.length > 0">
+    <ion-item button *ngFor="let alumno of alumnos" (click)="irLlegue(alumno)">
+
+      <ion-avatar slot="start">
+        <img *ngIf="alumno.foto?.length > 0 && alumno.foto[0]?.url"
+             [src]="'http://localhost:1337' + alumno.foto[0].url" />
+        <ion-icon *ngIf="!alumno.foto?.length" name="person-circle-outline"></ion-icon>
+      </ion-avatar>
+
+      <ion-label>
+        <h2>{{ alumno.nombre }} {{ alumno.apellido }}</h2>
+        <p>Grado: {{ alumno.grado || 'N/A' }}</p>
+        <p>Hora de salida: {{ alumno.hora_salida || 'N/A' }}</p>
+      </ion-label>
+
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-list> -->
+
+  <!-- Mensaje si no hay alumnos -->
+  <!-- <div *ngIf="!loading && alumnos.length === 0" class="no-alumnos">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    <p>No tienes alumnos asignados por el momento.</p>
+  </div>
+</ion-content> -->
+
+
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Estudiantes Asignados</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-spinner *ngIf="loading" name="crescent" class="spinner-center"></ion-spinner>
+
+        <ion-list *ngIf="!loading && alumnos.length > 0">
+          <ion-item button *ngFor="let alumno of alumnos" (click)="irLlegue(alumno)">
+            <ion-avatar slot="start">
+              <img *ngIf="alumno.foto?.length > 0 && alumno.foto[0]?.url"
+                   [src]="'http://localhost:1337' + alumno.foto[0].url" />
+              <ion-icon *ngIf="!alumno.foto?.length" name="person-circle-outline"></ion-icon>
+            </ion-avatar>
+            <ion-label>
+              <h2>{{ alumno.nombre }} {{ alumno.apellido }}</h2>
+              <p>Grado: {{ alumno.grado || 'N/A' }}</p>
+              <p>Hora de salida: {{ alumno.hora_salida || 'N/A' }}</p>
+            </ion-label>
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+          </ion-item>
+        </ion-list>
+
+        <div *ngIf="!loading && alumnos.length === 0" class="no-alumnos ion-text-center">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          <p>No tienes alumnos asignados por el momento.</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

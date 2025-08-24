@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "persona_autorizadas",
+  "info": {
+    "singularName": "persona-autorizada",
+    "pluralName": "persona-autorizadas",
+    "displayName": "PersonaAutorizada"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "apellidos": {
+      "type": "string",
+      "required": true
+    },
+    "foto": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "documentooficial": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "telefono": {
+      "type": "biginteger",
+      "required": true
+    },
+    "Domicilio": {
+      "type": "text",
+      "required": true
+    },
+    "alumnos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::alumno.alumno",
+      "mappedBy": "persona_autorizadas"
+    },
+    "estatus": {
+      "type": "boolean",
+      "required": false
+    }
+  }
+}

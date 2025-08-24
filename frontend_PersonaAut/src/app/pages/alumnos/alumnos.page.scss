@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Toolbar */
+ion-toolbar {
+  --background: linear-gradient(135deg, #6d2d86, #f72585);
+  --color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Fondo degradado de toda la página */
+ion-content {
+  --background: linear-gradient(
+    135deg,
+    #1a1a1a 0%,
+    #aa62b3 10%,
+    #6d2d86 30%,
+    #ee5e9f 40%,
+    #f72585 130%
+  );
+}
+
+/* Lista */
+ion-list {
+  background: transparent; /* que se vea el fondo degradado */
+  margin: 0;
+  padding: 0 8px;
+}
+
+/* Items */
+ion-item {
+  --background: rgba(17, 17, 17, 0.603); /* semi-transparente */
+  --border-color: #222;
+  --color: #fff;
+  border-radius: 200px; /* semi-redondo más pronunciado */
+  margin: 12px 0; /* más separación vertical */
+  padding: 20px 24px; /* más espacio interno para que no se vea apretado */
+  backdrop-filter: blur(6px);
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex; /* asegurar layout flexible */
+  align-items: center; /* centrar verticalmente avatar y texto */
+  gap: 16px; /* espacio entre avatar y texto */
+}
+
+/* Avatar */
+ion-avatar {
+  width: 90px;
+  height: 90px;
+  min-width: 90px;
+}
+
+ion-avatar img {
+  border-radius: 50%;
+  border: 3px solid #f72585;
+}
+
+/* Texto */
+ion-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ion-label h2 {
+  font-weight: 700;
+  color: #fff;
+  font-size: 24px; /* más grande */
+  margin-bottom: 6px;
+}
+
+ion-label p {
+  font-size: 18px; /* más grande */
+  opacity: 0.85;
+  margin: 2px 0;
+}

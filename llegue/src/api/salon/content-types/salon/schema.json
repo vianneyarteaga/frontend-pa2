@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "salons",
+  "info": {
+    "singularName": "salon",
+    "pluralName": "salons",
+    "displayName": "Salon"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Numero": {
+      "type": "biginteger",
+      "required": true
+    },
+    "docente": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::docente.docente"
+    },
+    "alumnos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::alumno.alumno"
+    },
+    "estado": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Llegué</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="llegue-container">
+    <h1>{{ user?.username }}</h1>
+    <p>En camino, el Docente ha sido notificado.</p>
+    <ion-button expand="block" color="danger" (click)="cancelarLlegada()">Cancelar</ion-button>
+  </div>
+</ion-content> -->
+
+<!-- Barra inferior -->
+<!-- <ion-footer class="bottom-bar">
+  <button class="btn-home" (click)="goAlmunos()">
+    <ion-icon name="people-outline"></ion-icon>
+    <span>Estudiantes</span>
+  </button>
+</ion-footer> -->
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Llegué</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="page-container">
+    <h1>{{ user?.username }}</h1>
+    <p>En camino, el Docente ha sido notificado.</p>
+    <ion-button expand="block" color="danger" (click)="cancelarLlegada()">
+      Cancelar
+    </ion-button>
+  </div>
+</ion-content>
+
+<ion-footer class="bottom-bar">
+  <button class="btn-home" (click)="goAlmunos()">
+    <ion-icon name="people-outline"></ion-icon>
+    <span>Estudiantes</span>
+  </button>
+</ion-footer>
+
